@@ -1,0 +1,25 @@
+﻿# Computer Vision & Deep Learning Libraries
+{%- if cookiecutter.basic_libraries == 'y' %}
+torch
+torchvision
+numpy
+pandas
+matplotlib
+pillow
+pyyaml
+tqdm
+opencv-python
+{%- endif %}
+{%- if cookiecutter.use_hydra_config == 'y' %}
+hydra-core
+{%- endif %}
+
+
+
+{%- if cookiecutter.use_code_quality == 'y' %}
+# Code Quality Tools
+flake8
+isort
+black
+pre-commit
+{%- endif %}

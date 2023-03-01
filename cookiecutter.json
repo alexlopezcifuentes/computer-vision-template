@@ -1,0 +1,9 @@
+{
+    "author_name": "your-name",
+    "project_name": "project-name",
+    "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "use_code_quality": ["y", "n"],
+    "use_docker": ["y", "n"],
+    "basic_libraries": ["y", "n"],
+    "use_hydra_config": ["y", "n"]
+}

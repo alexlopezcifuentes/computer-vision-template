@@ -1,0 +1,16 @@
+{%- if cookiecutter.use_code_quality == 'y' %}
+repos:
+  - repo: local
+    hooks:
+      - id: quality
+        name: Run quality tools
+        language: script
+        always_run: true
+        entry: /usr/bin/make quality
+      - id: quality-check
+        name: Run quality check tools
+        language: script
+        always_run: true
+        entry: /usr/bin/make quality-check
+{%- endif %}
+
