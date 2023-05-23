@@ -8,6 +8,11 @@ initialize_git:
 	pre-commit install
 {%- endif %}
 
+{%- if cookiecutter.use_code_quality == 'y' %}
+pre_commit:
+	pre-commit install
+{%- endif %}
+
 {%- if cookiecutter.use_docker == 'y' %}
 # Docker
 docker-build:
@@ -23,9 +28,9 @@ setup: initialize_git docker-build
 flake8:
 	flake8 .
 isort-check:
-	isort --check-only . --profile black
+	isort --check-only .
 isort:
-	isort . --profile black
+	isort .
 black-check:
 	black --check .
 black:
